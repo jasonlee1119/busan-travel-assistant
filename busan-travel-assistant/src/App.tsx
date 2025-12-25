@@ -9,7 +9,7 @@ export default function App() {
     <>
       <BrowserRouter basename="/busan-travel-assistant">
         <TopBar />
-        <div className="mt-4 ml-4 mr-4">
+        <div className="app-container">
           <Toolbar />
           <Router />
         </div>

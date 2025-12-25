@@ -34,15 +34,15 @@ export function WeatherWidget({ weather, loading, error }: WeatherWidgetProps) {
   return (
     <>
       <Paper elevation={2} sx={{ p: 2, textAlign: 'center' }}>
-        <Typography variant="body2">Current Weather in Busan</Typography>
+        <Typography variant="body2">釜山即時天氣</Typography>
         <Typography variant="body2">
-          Temperature: {weather?.temperature}°C
+          溫度: {weather?.temperature.toFixed(1)}°C
         </Typography>
         <Typography variant="body2">
-          Feels like: {weather?.apparentTemperature}°C
+          體感溫度: {weather?.apparentTemperature.toFixed(1)}°C
         </Typography>
         <Typography variant="body2">
-          Humidity: {weather?.relativeHumidity}%
+          濕度: {weather?.relativeHumidity.toFixed(1)}%
         </Typography>
         <Typography variant="body2">Rain: {weather?.rain}mm</Typography>
         <Typography variant="body2">Showers: {weather?.showers}mm</Typography>

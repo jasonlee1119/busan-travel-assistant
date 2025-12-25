@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getBusanWeatherAsync } from '../services/weatherApiService';
 import { WeatherWidget } from '../components/WeatherWidget';
 import type { CurrentWeather } from '../types/weather';
+import { Box } from '@mui/material';
 
 export function Home() {
   const [weather, setWeather] = useState<CurrentWeather | null>(null);
@@ -26,7 +27,16 @@ export function Home() {
 
   return (
     <>
-      <WeatherWidget weather={weather} loading={loading} error={error} />
+      <Box
+        sx={{
+          backgroundColor: 'background.default',
+          color: 'text.primary',
+          minHeight: '100vh',
+          padding: 2,
+        }}
+      >
+        <WeatherWidget weather={weather} loading={loading} error={error} />
+      </Box>
     </>
   );
 }
