@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router';
 import { Router } from './router/Router';
+import { TopBar } from './components/topbar/TopBar';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
     <>
       <BrowserRouter basename="/busan-travel-assistant">
+        <TopBar />
         <div className="mt-4 ml-4 mr-4">
           <Router />
         </div>
@@ -16,6 +15,4 @@ function App() {
     </>
   );
 }
-
-export default App;
 
