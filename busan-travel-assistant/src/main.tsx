@@ -7,40 +7,24 @@ import {
   GlobalStyles,
   Icon,
   IconButton,
+  InitColorSchemeScript,
   StyledEngineProvider,
   ThemeProvider,
 } from '@mui/material';
-import { amber, lightBlue } from '@mui/material/colors';
 import { closeSnackbar, SnackbarProvider } from 'notistack';
 
 const theme = createTheme({
-  cssVariables: { cssVarPrefix: 'any', colorSchemeSelector: 'data' },
+  cssVariables: { cssVarPrefix: 'any', colorSchemeSelector: 'class' },
   colorSchemes: {
-    light: {
-      palette: {
-        primary: {
-          main: amber[700],
-        },
-        secondary: {
-          main: lightBlue[700],
-        },
-      },
-    },
-    dark: {
-      palette: {
-        primary: {
-          main: amber[500],
-        },
-        secondary: {
-          main: lightBlue[500],
-        },
-      },
-    },
+    light: true,
+    dark: true,
   },
+  defaultColorScheme: 'dark',
 });
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <InitColorSchemeScript />
     <StyledEngineProvider enableCssLayer>
       <ThemeProvider theme={theme}>
         <GlobalStyles styles="@layer base, mui, utilities;" />

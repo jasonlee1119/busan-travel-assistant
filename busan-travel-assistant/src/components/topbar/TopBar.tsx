@@ -7,6 +7,7 @@ export function TopBar() {
     <>
       <AppBar
         position="fixed"
+        color="inherit"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>

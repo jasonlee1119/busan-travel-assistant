@@ -9,7 +9,7 @@ export function Router() {
           <Route
             key={route.path}
             path={route.path}
-            Component={route.component}
+            element={<route.component />}
           />
         ))}
       </Routes>

@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter } from 'react-router';
 import { Router } from './router/Router';
 import { TopBar } from './components/topbar/TopBar';
+import Toolbar from '@mui/material/Toolbar';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <BrowserRouter basename="/busan-travel-assistant">
         <TopBar />
         <div className="mt-4 ml-4 mr-4">
+          <Toolbar />
           <Router />
         </div>
       </BrowserRouter>
