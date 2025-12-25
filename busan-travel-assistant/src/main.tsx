@@ -4,6 +4,7 @@ import './index.css';
 import App from './App.tsx';
 import {
   createTheme,
+  CssBaseline,
   GlobalStyles,
   Icon,
   IconButton,
@@ -25,6 +26,7 @@ const theme = createTheme({
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <InitColorSchemeScript />
+    <CssBaseline />
     <StyledEngineProvider enableCssLayer>
       <ThemeProvider theme={theme}>
         <GlobalStyles styles="@layer base, mui, utilities;" />
