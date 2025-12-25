@@ -6,6 +6,15 @@ const Home = lazy(() => import('../pages/Home').then((module) => ({ default: mod
 export const routes = {
   home: {
     path: '/',
-    component: Home
+    component: Home,
+    showInNavigation: true,
+    icon: 'home',
+    name: 'Home',
   }
 } 
+
+export const getNavigationItems =() => {
+  return Object.values(routes).filter(route => (
+    route.showInNavigation
+  ));
+}

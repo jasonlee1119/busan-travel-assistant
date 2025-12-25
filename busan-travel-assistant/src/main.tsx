@@ -14,7 +14,7 @@ import { amber, lightBlue } from '@mui/material/colors';
 import { closeSnackbar, SnackbarProvider } from 'notistack';
 
 const theme = createTheme({
-  cssVariables: true,
+  cssVariables: { cssVarPrefix: 'any', colorSchemeSelector: 'data' },
   colorSchemes: {
     light: {
       palette: {
@@ -37,7 +37,6 @@ const theme = createTheme({
       },
     },
   },
-  defaultColorScheme: 'light',
 });
 
 createRoot(document.getElementById('root')!).render(
